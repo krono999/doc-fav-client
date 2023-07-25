@@ -1,7 +1,70 @@
-<nav class="navbar navbar-dark bg-dark text-white">
-  <a class="navbar-brand">Games</a>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
+<nav class="navbar top-fixed navbar-expand-lg navbar-light bg-dark">
+  <div class="container-fluid">
+    <a style="color: white" class="navbar-brand" href="#">Doc Fav Challenge</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarScroll"
+      aria-controls="navbarScroll"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul
+        class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+        style="--bs-scroll-height: 100px"
+      >
+        <li class="nav-item dropdown">
+          <a
+            style="color: whitesmoke"
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarScrollingDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Genre
+          </a>
+          <ul style="height: 500px; overflow: auto" class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li *ngFor="let game of gamesList">
+              <a
+                style="color: black; height: 50px; overflow: auto"
+                class="dropdown-item"
+                href="#"
+                >{{ game.genre }}</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            style="color: whitesmoke"
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarScrollingDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Platform
+          </a>
+          <ul style="height: 500px; overflow: auto" class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li *ngFor="let game of gamesList">
+              <a style="color: black" class="dropdown-item" href="#">{{
+                game.platform
+              }}</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search Name" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
 </nav>
