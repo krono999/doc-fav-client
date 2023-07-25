@@ -1,3 +1,14 @@
-<p>
-  game-card works!
-</p>
+<div *ngFor="let game of gamesList" (click)="onGameClick(game)">
+  <div class="card h-100" style="width: 18rem">
+    <img
+      src="{{ game.thumbnail }}"
+      class="card-img-top"
+      alt="{{ game.title }}"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ game.title }}</h5>
+      <p class="card-text">Genre: {{ game.genre }}</p>
+      <p class="card-text">Platform: {{ game.platform }}</p>
+    </div>
+  </div>
+</div>
