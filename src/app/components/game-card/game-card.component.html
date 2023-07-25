@@ -1,4 +1,8 @@
-<div *ngFor="let game of gamesList" (click)="onGameClick(game)">
+<div
+  style="margin-left: 10px; margin-right: 10px; margin-bottom: 10px"
+  *ngFor="let game of gamesList"
+  (click)="onGameClick(game)"
+>
   <div class="card h-100" style="width: 18rem">
     <img
       src="{{ game.thumbnail }}"
