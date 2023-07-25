@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { GameCardComponent } from './components/game-card/game-card.component';
 import { GameListComponent } from './components/game-list/game-list.component';
+import { InputSelectComponent } from './components/input-select/input-select.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { GameListComponent } from './components/game-list/game-list.component';
     HomeComponent,
     NavBarComponent,
     GameListComponent,
-    GameCardComponent
+    GameCardComponent,
+    InputSelectComponent
   ],
   imports: [
     BrowserModule,
