@@ -1,15 +1,15 @@
 export interface Welcome {
-    id:                     number;
-    title:                  string;
-    thumbnail:              string;
-    short_description:      string;
-    game_url:               string;
-    genre:                  Genre;
-    platform:               Platform;
-    publisher:              string;
-    developer:              string;
-    release_date:           string;
-    freetogame_profile_url: string;
+    id:                     any;
+    title:                  any;
+    thumbnail:              any;
+    short_description:      any;
+    game_url:               any;
+    genre:                  any;
+    platform:               any;
+    publisher:              any;
+    developer:              any;
+    release_date:           any;
+    freetogame_profile_url: any;
 }
 
 export enum Genre {

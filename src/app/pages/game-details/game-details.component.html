@@ -1,0 +1,16 @@
+<div style="display: flex; align-items: center; justify-content: center; height: 100vh;">
+  <div style="background-color: rgba(124, 117, 124, 0.219); border-radius: 20px; padding: 20px; width: 50%;">
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+      <img src="{{ game.thumbnail }}" class="card-img-top" alt="{{ game.title }}" style="width: 100%; height: auto; border-radius: 20px;" />
+      <div class="card-body" style="text-align: center;">
+        <h5 style="color: rgb(255, 249, 249); margin-top: 10px;" class="card-title">{{ game.title }}</h5>
+        <p style="color: rgb(199, 172, 172);">Genre: {{ game.genre }}</p>
+        <p style="color: rgb(199, 172, 172);">Platform: {{ game.platform }}</p>
+        <p style="color: rgb(199, 172, 172);">Developer: {{ game.developer }}</p>
+        <p style="color: rgb(199, 172, 172);">Publisher: {{ game.publisher }}</p>
+        <p style="color: rgb(199, 172, 172);">Release Date: {{ game.release_date }}</p>
+        <p style="color: rgb(199, 172, 172);">Description: {{ game.short_description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

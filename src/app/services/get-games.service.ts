@@ -13,4 +13,16 @@ export class GetGamesService {
   get(url: string): Observable<any> {
     return this.http.get(`${this.API}/${url}`);
   }
+  getbyId(id: string): Observable<any> {
+    return this.http.get(`${this.API}/${id}`);
+  }
+  getbyPlatform(plat: string): Observable<any> {
+    return this.http.get(`${this.API}/${plat}`);
+  }
+  getbyGenre(gen: string): Observable<any> {
+    return this.http.get(`${this.API}/${gen}`);
+  }
+  getbyName(name: string): Observable<any> {
+    return this.http.get(`${this.API}/${name}`);
+  }
 }
