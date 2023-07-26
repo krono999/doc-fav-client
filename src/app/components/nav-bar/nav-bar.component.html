@@ -21,22 +21,24 @@
           <a
             style="color: whitesmoke"
             class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarScrollingDropdown"
+            href="/home"
+            id="navbarGenreDropdown"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
             Genre
           </a>
-          <ul style="height: 500px; overflow: auto" class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-            <li *ngFor="let game of gamesList">
+          <ul style="height: 500px; overflow: auto" class="dropdown-menu" aria-labelledby="navbarGenreDropdown">
+            <li *ngFor="let genreOption of genreOptions">
               <a
                 style="color: black; height: 50px; overflow: auto"
                 class="dropdown-item"
-                href="#"
-                >{{ game.genre }}</a
+                href="/home"
+                (click)="onGenreFilter($event)"
               >
+                {{ genreOption }}
+              </a>
             </li>
           </ul>
         </li>
@@ -44,26 +46,39 @@
           <a
             style="color: whitesmoke"
             class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarScrollingDropdown"
+            href="/home"
+            id="navbarPlatformDropdown"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
             Platform
           </a>
-          <ul style="height: 500px; overflow: auto" class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-            <li *ngFor="let game of gamesList">
-              <a style="color: black" class="dropdown-item" href="#">{{
-                game.platform
-              }}</a>
+          <ul style="height: 500px; overflow: auto" class="dropdown-menu" aria-labelledby="navbarPlatformDropdown">
+            <li *ngFor="let platformOption of platformOptions">
+              <a
+                style="color: black; height: 50px; overflow: auto"
+                class="dropdown-item"
+                href="/home"
+                (click)="onPlatformFilter($event)"
+              >
+                {{ platformOption }}
+              </a>
             </li>
           </ul>
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search Name" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search Name"
+        aria-label="Search"
+        [(ngModel)]="nameFilter"
+        name="searchName"
+        (input)="onNameFilter($event)"
+      >
+      <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
   </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { GetGamesService } from '../../services/get-games.service';
 import { environment } from 'src/app/environment/environment';
 import { Router } from '@angular/router';
@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./game-card.component.css'],
 })
 export class GameCardComponent implements OnInit {
-  gamesList: any;
-
+  // gamesList: any;
+  @Input() gamesList!: any[];
   constructor(private router: Router, private getGamesService: GetGamesService) {}
 
   protected API = environment.api_url;
