@@ -42,7 +42,6 @@ export class GameDetailsComponent implements OnInit {
     this.getGamesService.getbyId(url).subscribe(
       (data) => {
         if (data) {
-          // Actualizar las propiedades del objeto game con los datos obtenidos
           this.game.id = data.id;
           this.game.title = data.title;
           this.game.thumbnail = data.thumbnail;

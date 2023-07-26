@@ -8,8 +8,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { GameCardComponent } from './components/game-card/game-card.component';
 import { GameListComponent } from './components/game-list/game-list.component';
-import { CommonModule } from '@angular/common';
 import { GameDetailsComponent } from './pages/game-details/game-details.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { GameDetailsComponent } from './pages/game-details/game-details.componen
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
